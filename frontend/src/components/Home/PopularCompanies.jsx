@@ -1,35 +1,35 @@
 import React from "react";
-import { FaMicrosoft, FaApple } from "react-icons/fa";
-import { SiTesla } from "react-icons/si";
+
+
 
 const PopularCompanies = () => {
   const companies = [
     {
       id: 1,
-      title: "Microsoft",
-      location: "Street 10 Karachi, Pakistan",
+      title: "St. Benard Medical Center",
+      location: "Street 10 Karachi, Kano",
       openPositions: 10,
-      icon: <FaMicrosoft />,
+    
     },
     {
       id: 2,
-      title: "Tesla",
-      location: "Street 10 Karachi, Pakistan",
+      title: "OurLady of Apostles Medical Center",
+      location: "Street 10 Karachi, Lagos",
       openPositions: 5,
-      icon: <SiTesla />,
+     
     },
     {
       id: 3,
-      title: "Apple",
-      location: "Street 10 Karachi, Pakistan",
+      title: "Veritas Clinic",
+      location: "Veritas University Abuja",
       openPositions: 20,
-      icon: <FaApple />,
+     
     },
   ];
   return (
     <div className="companies">
       <div className="container">
-        <h3>TOP COMPANIES</h3>
+        <h3>PRIMARY HEALTH CENTERS</h3>
         <div className="banner">
           {companies.map((element) => {
             return (
