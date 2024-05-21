@@ -1,64 +1,47 @@
 import React from "react";
-import {
-  MdOutlineDesignServices,
-  MdOutlineWebhook,
-  MdAccountBalance,
-  MdOutlineAnimation,
-} from "react-icons/md";
-import { TbAppsFilled } from "react-icons/tb";
-import { FaReact } from "react-icons/fa";
-import { GiArtificialIntelligence } from "react-icons/gi";
-import { IoGameController } from "react-icons/io5";
+
 
 const PopularCategories = () => {
   const categories = [
     {
       id: 1,
-      title: "Graphics & Design",
-      subTitle: "305 Open Positions",
-      icon: <MdOutlineDesignServices />,
+      title: "Cardiology",
+      subTitle: "305 Open Positions"
     },
     {
       id: 2,
-      title: "Mobile App Development",
-      subTitle: "500 Open Positions",
-      icon: <TbAppsFilled />,
+      title: "Dermatology",
+      subTitle: "500 Open Positions"
     },
     {
       id: 3,
-      title: "Frontend Web Development",
-      subTitle: "200 Open Positions",
-      icon: <MdOutlineWebhook />,
+      title: "Emergency Medicine",
+      subTitle: "200 Open Positions"
     },
     {
       id: 4,
-      title: "MERN STACK Development",
-      subTitle: "1000+ Open Postions",
-      icon: <FaReact />,
+      title: "Family Medicine",
+      subTitle: "1000+ Open Postions"
     },
     {
       id: 5,
-      title: "Account & Finance",
-      subTitle: "150 Open Positions",
-      icon: <MdAccountBalance />,
+      title: "Pathology",
+      subTitle: "150 Open Positions"
     },
     {
       id: 6,
-      title: "Artificial Intelligence",
-      subTitle: "867 Open Positions",
-      icon: <GiArtificialIntelligence />,
+      title: "Forensic Pathology",
+      subTitle: "867 Open Positions"
     },
     {
       id: 7,
-      title: "Video Animation",
-      subTitle: "50 Open Positions",
-      icon: <MdOutlineAnimation />,
+      title: "Hospital Medicine",
+      subTitle: "50 Open Positions"
     },
     {
       id: 8,
-      title: "Game Development",
-      subTitle: "80 Open Positions",
-      icon: <IoGameController />,
+      title: "Neurology",
+      subTitle: "80 Open Positions"
     },
   ];
   return (
