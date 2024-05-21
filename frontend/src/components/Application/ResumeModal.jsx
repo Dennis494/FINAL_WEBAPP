@@ -7,7 +7,7 @@ const ResumeModal = ({ imageUrl, onClose }) => {
         <span className="close" onClick={onClose}>
           &times;
         </span>
-        <img src={imageUrl} alt="resume" />
+        <img src={imageUrl} alt="Certificate" />
       </div>
     </div>
   );
