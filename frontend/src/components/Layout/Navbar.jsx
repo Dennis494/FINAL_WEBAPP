@@ -40,7 +40,7 @@ const Navbar = () => {
           </li>
           <li>
             <Link to={"/job/getall"} onClick={() => setShow(false)}>
-              ALL JOBS
+              ALL OPENINGS
             </Link>
           </li>
           <li>
@@ -54,12 +54,12 @@ const Navbar = () => {
             <>
               <li>
                 <Link to={"/job/post"} onClick={() => setShow(false)}>
-                  POST NEW JOB
+                  POST NEW OPPORTUNITY
                 </Link>
               </li>
               <li>
                 <Link to={"/job/me"} onClick={() => setShow(false)}>
-                  VIEW YOUR JOBS
+                  VIEW POSTS
                 </Link>
               </li>
             </>

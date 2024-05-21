@@ -30,7 +30,7 @@ const JobDetails = () => {
   return (
     <section className="jobDetail page">
       <div className="container">
-        <h3>Job Details</h3>
+        <h3>Opportunity Details</h3>
         <div className="banner">
           <p>
             Title: <span> {job.title}</span>
