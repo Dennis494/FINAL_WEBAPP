@@ -90,28 +90,28 @@ const PostJob = () => {
                 onChange={(e) => setCategory(e.target.value)}
               >
                 <option value="">Select Category</option>
-                <option value="Graphics & Design">Graphics & Design</option>
-                <option value="Mobile App Development">
-                  Mobile App Development
+                <option value="Cardiology">Cardiology</option>
+                <option value="Dermatology">
+                  Dermatology
                 </option>
-                <option value="Frontend Web Development">
-                  Frontend Web Development
+                <option value="Emergency Medicine">
+                  Emergency Medicine
                 </option>
-                <option value="MERN Stack Development">
-                  MERN STACK Development
+                <option value="Family Medicine">
+                  Family Medicine
                 </option>
-                <option value="Account & Finance">Account & Finance</option>
-                <option value="Artificial Intelligence">
-                  Artificial Intelligence
+                <option value="Forensic Pathology">Forensic Pathology</option>
+                <option value="General Surgery">
+                  General Surgery
                 </option>
-                <option value="Video Animation">Video Animation</option>
-                <option value="MEAN Stack Development">
-                  MEAN STACK Development
+                <option value="Hospital Medicine">Hospital Medicine</option>
+                <option value="Neurologyt">
+                  Neurologyt
                 </option>
-                <option value="MEVN Stack Development">
-                  MEVN STACK Development
+                <option value="Orthopaedic Surgery">
+                  Orthopaedic Surgery
                 </option>
-                <option value="Data Entry Operator">Data Entry Operator</option>
+                <option value="Pathology">Pathology</option>
               </select>
             </div>
             <div className="wrapper">

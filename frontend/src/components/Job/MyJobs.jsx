@@ -162,36 +162,28 @@ const MyJobs = () => {
                               editingMode !== element._id ? true : false
                             }
                           >
-                            <option value="Graphics & Design">
-                              Graphics & Design
-                            </option>
-                            <option value="Mobile App Development">
-                              Mobile App Development
-                            </option>
-                            <option value="Frontend Web Development">
-                              Frontend Web Development
-                            </option>
-                            <option value="MERN Stack Development">
-                              MERN STACK Development
-                            </option>
-                            <option value="Account & Finance">
-                              Account & Finance
-                            </option>
-                            <option value="Artificial Intelligence">
-                              Artificial Intelligence
-                            </option>
-                            <option value="Video Animation">
-                              Video Animation
-                            </option>
-                            <option value="MEAN Stack Development">
-                              MEAN STACK Development
-                            </option>
-                            <option value="MEVN Stack Development">
-                              MEVN STACK Development
-                            </option>
-                            <option value="Data Entry Operator">
-                              Data Entry Operator
-                            </option>
+                <option value="Cardiology">Cardiology</option>
+                <option value="Dermatology">
+                  Dermatology
+                </option>
+                <option value="Emergency Medicine">
+                  Emergency Medicine
+                </option>
+                <option value="Family Medicine">
+                  Family Medicine
+                </option>
+                <option value="Forensic Pathology">Forensic Pathology</option>
+                <option value="General Surgery">
+                  General Surgery
+                </option>
+                <option value="Hospital Medicine">Hospital Medicine</option>
+                <option value="Neurologyt">
+                  Neurologyt
+                </option>
+                <option value="Orthopaedic Surgery">
+                  Orthopaedic Surgery
+                </option>
+                <option value="Pathology">Pathology</option>
                           </select>
                         </div>
                         <div>
