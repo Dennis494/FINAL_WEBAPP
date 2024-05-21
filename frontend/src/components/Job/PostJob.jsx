@@ -10,48 +10,28 @@ const PostJob = () => {
   const [country, setCountry] = useState("");
   const [city, setCity] = useState("");
   const [location, setLocation] = useState("");
-  const [salaryFrom, setSalaryFrom] = useState("");
-  const [salaryTo, setSalaryTo] = useState("");
-  const [fixedSalary, setFixedSalary] = useState("");
-  const [salaryType, setSalaryType] = useState("default");
+  // const [salaryFrom, setSalaryFrom] = useState("");
+  // const [salaryTo, setSalaryTo] = useState("");
+  // const [fixedSalary, setFixedSalary] = useState("");
+  // const [salaryType, setSalaryType] = useState("default");
 
   const { isAuthorized, user } = useContext(Context);
 
   const handleJobPost = async (e) => {
     e.preventDefault();
-    if (salaryType === "Fixed Salary") {
-      setSalaryFrom("");
-      setSalaryFrom("");
-    } else if (salaryType === "Ranged Salary") {
-      setFixedSalary("");
-    } else {
-      setSalaryFrom("");
-      setSalaryTo("");
-      setFixedSalary("");
-    }
+  
     await axios
       .post(
         "http://localhost:4000/api/v1/job/post",
-        fixedSalary.length >= 4
-          ? {
-              title,
-              description,
-              category,
-              country,
-              city,
-              location,
-              fixedSalary,
-            }
-          : {
-              title,
-              description,
-              category,
-              country,
-              city,
-              location,
-              salaryFrom,
-              salaryTo,
-            },
+        {
+          title,
+          description,
+          category,
+          country,
+          city,
+          location,
+          // Add other required fields here if needed
+        },
         {
           withCredentials: true,
           headers: {
@@ -66,7 +46,6 @@ const PostJob = () => {
         toast.error(err.response.data.message);
       });
   };
-
   const navigateTo = useNavigate();
   if (!isAuthorized || (user && user.role !== "Employer")) {
     navigateTo("/");
@@ -134,7 +113,7 @@ const PostJob = () => {
               onChange={(e) => setLocation(e.target.value)}
               placeholder="Location"
             />
-            <div className="salary_wrapper">
+            {/* <div className="salary_wrapper">
               <select
                 value={salaryType}
                 onChange={(e) => setSalaryType(e.target.value)}
@@ -170,7 +149,7 @@ const PostJob = () => {
                   </div>
                 )}
               </div>
-            </div>
+            </div> */}
             <textarea
               rows="10"
               value={description}

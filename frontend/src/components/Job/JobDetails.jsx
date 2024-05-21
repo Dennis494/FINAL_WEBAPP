@@ -53,7 +53,7 @@ const JobDetails = () => {
           <p>
             Job Posted On: <span>{job.jobPostedOn}</span>
           </p>
-          <p>
+          {/* <p>
             Salary:{" "}
             {job.fixedSalary ? (
               <span>{job.fixedSalary}</span>
@@ -62,7 +62,7 @@ const JobDetails = () => {
                 {job.salaryFrom} - {job.salaryTo}
               </span>
             )}
-          </p>
+          </p> */}
           {user && user.role === "Employer" ? (
             <></>
           ) : (
