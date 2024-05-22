@@ -34,6 +34,9 @@ const corsOptions = {
   methods: ["GET", "POST", "DELETE", "PUT", "OPTIONS"],
   credentials: true, // Allow cookies and other credentials to be sent
   allowedHeaders: ["Content-Type", "Authorization"], // Add other headers as needed
+  
+  preflightContinue: false,
+  optionsSuccessStatus: 204 // Ensure preflight requests return 204
 };
 
 // Apply CORS middleware
