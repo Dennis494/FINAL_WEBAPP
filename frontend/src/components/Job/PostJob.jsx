@@ -22,9 +22,8 @@ const PostJob = () => {
   const handleJobPost = async (e) => {
     e.preventDefault();
   
-    await axiosInstance
-      .post(
-        "/api/v1/job/post",
+    await axios.post(
+        "https://final-webapp.onrender.com/api/v1/job/post",
         {
           title,
           description,

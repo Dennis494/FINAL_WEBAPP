@@ -22,8 +22,8 @@ const Register = () => {
   const handleRegister = async (e) => {
     e.preventDefault();
     try {
-      const { data } = await axiosInstance.post(
-        "/api/v1/user/register",
+      const { data } = await axios.post(
+        "https://final-webapp.onrender.com/api/v1/user/register",
         { name, phone, email, role, password },
         {
           headers: {

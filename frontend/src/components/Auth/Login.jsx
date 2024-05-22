@@ -18,8 +18,8 @@ const Login = () => {
   const handleLogin = async (e) => {
     e.preventDefault();
     try {
-      const { data } = await axiosInstance.post(
-        "/api/v1/user/login",
+      const { data } = await axios.post(
+        "https://final-webapp.onrender.com/api/v1/user/login",
         { email, password, role },
         {
           headers: {

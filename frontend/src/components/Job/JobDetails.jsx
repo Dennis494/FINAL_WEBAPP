@@ -14,8 +14,7 @@ const JobDetails = () => {
   const { isAuthorized, user } = useContext(Context);
 
   useEffect(() => {
-    axiosInstance
-      .get(`/api/v1/job/${id}`, {
+    axios.get(`https://final-webapp.onrender.com/api/v1/job/${id}`, {
         withCredentials: true,
       })
       .then((res) => {

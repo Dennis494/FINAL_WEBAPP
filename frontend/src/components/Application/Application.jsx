@@ -35,8 +35,8 @@ const Application = () => {
     formData.append("jobId", id);
 
     try {
-      const { data } = await axiosInstance.post(
-        "/api/v1/application/post",
+      const { data } = await axios.post(
+        "https://final-webapp.onrender.com/api/v1/application/post",
         formData,
         {
           withCredentials: true,

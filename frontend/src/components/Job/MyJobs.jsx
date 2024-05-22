@@ -17,8 +17,8 @@ const MyJobs = () => {
   useEffect(() => {
     const fetchJobs = async () => {
       try {
-        const { data } = await axiosInstance.get(
-          "/api/v1/job/getmyjobs",
+        const { data } = await axios.get(
+          "https://final-webapp.onrender.com/api/v1/job/getmyjobs",
           { withCredentials: true }
         );
         setMyJobs(data.myJobs);
@@ -47,8 +47,7 @@ const MyJobs = () => {
   //Function For Updating The Job
   const handleUpdateJob = async (jobId) => {
     const updatedJob = myJobs.find((job) => job._id === jobId);
-    await axiosInstance
-      .put(`/api/v1/job/update/${jobId}`, updatedJob, {
+    await axios.put(`https://final-webapp.onrender.com/api/v1/job/update/${jobId}`, updatedJob, {
         withCredentials: true,
       })
       .then((res) => {
@@ -62,8 +61,7 @@ const MyJobs = () => {
 
   //Function For Deleting Job
   const handleDeleteJob = async (jobId) => {
-    await axiosInstance
-      .delete(`/api/v1/job/delete/${jobId}`, {
+    await axios.delete(`https://final-webapp.onrender.com/api/v1/job/delete/${jobId}`, {
         withCredentials: true,
       })
       .then((res) => {
