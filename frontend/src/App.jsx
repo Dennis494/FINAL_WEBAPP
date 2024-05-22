@@ -24,7 +24,7 @@ const App = () => {
     const fetchUser = async () => {
       try {
         const response = await axios.get(//check this
-          "https://final-webapp.onrender.com/api/v1/user/getuser",
+          "http://localhost:4000/api/v1/user/getuser",
           {
             withCredentials: true,
           }

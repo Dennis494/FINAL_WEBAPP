@@ -23,7 +23,7 @@ const PostJob = () => {
     e.preventDefault();
   
     await axios.post(
-        "https://final-webapp.onrender.com/api/v1/job/post",
+        "http://localhost:4000/api/v1/job/post",
         {
           title,
           description,

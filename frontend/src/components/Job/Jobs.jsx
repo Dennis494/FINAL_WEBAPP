@@ -10,7 +10,7 @@ const Jobs = () => {
   const navigateTo = useNavigate();
   useEffect(() => {
     try {
-      axios.get("https://final-webapp.onrender.com/api/v1/job/getall", {
+      axios.get("http://localhost:4000/api/v1/job/getall", {
           withCredentials: true,
         })
         .then((res) => {
