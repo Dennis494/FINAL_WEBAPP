@@ -1,5 +1,5 @@
 import axios from "axios";
-import axiosInstance from './api/axiosInstance'; // Adjust the path as needed
+import axiosInstance from '../../api/axiosInstance'; // Adjust the relative path accordingly
 import React, { useContext, useState } from "react";
 import toast from "react-hot-toast";
 import { useNavigate, useParams } from "react-router-dom";

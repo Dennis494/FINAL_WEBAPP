@@ -5,7 +5,7 @@ import { FaCheck } from "react-icons/fa6";
 import { RxCross2 } from "react-icons/rx";
 import { Context } from "../../main";
 import { useNavigate } from "react-router-dom";
-import axiosInstance from './api/axiosInstance'; // Adjust the path as needed
+import axiosInstance from '../../api/axiosInstance'; // Adjust the relative path accordingly
 
 const MyJobs = () => {
   const [myJobs, setMyJobs] = useState([]);

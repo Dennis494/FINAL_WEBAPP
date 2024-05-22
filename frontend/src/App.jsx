@@ -16,7 +16,7 @@ import MyApplications from "./components/Application/MyApplications";
 import PostJob from "./components/Job/PostJob";
 import NotFound from "./components/NotFound/NotFound";
 import MyJobs from "./components/Job/MyJobs";
-import axiosInstance from './api/axiosInstance'; // Adjust the path as needed
+import axiosInstance from '../../api/axiosInstance'; // Adjust the relative path accordingly
 
 const App = () => {
   const { isAuthorized, setIsAuthorized, setUser } = useContext(Context);

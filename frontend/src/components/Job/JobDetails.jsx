@@ -3,7 +3,7 @@ import { Link, useParams } from "react-router-dom";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import { Context } from "../../main";
-import axiosInstance from './api/axiosInstance'; // Adjust the path as needed
+import axiosInstance from '../../api/axiosInstance'; // Adjust the relative path accordingly
 
 
 const JobDetails = () => {
