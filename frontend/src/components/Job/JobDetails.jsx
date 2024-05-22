@@ -3,6 +3,9 @@ import { Link, useParams } from "react-router-dom";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import { Context } from "../../main";
+import axiosInstance from './api/axiosInstance'; // Adjust the path as needed
+
+
 const JobDetails = () => {
   const { id } = useParams();
   const [job, setJob] = useState({});
@@ -11,8 +14,8 @@ const JobDetails = () => {
   const { isAuthorized, user } = useContext(Context);
 
   useEffect(() => {
-    axios
-      .get(`http://localhost:4000/api/v1/job/${id}`, {
+    axiosInstance
+      .get(`/api/v1/job/${id}`, {
         withCredentials: true,
       })
       .then((res) => {

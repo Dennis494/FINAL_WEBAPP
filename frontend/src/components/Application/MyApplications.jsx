@@ -1,3 +1,4 @@
+import axiosInstance from './api/axiosInstance'; // Adjust the path as needed
 import React, { useContext, useEffect, useState } from "react";
 import { Context } from "../../main";
 import axios from "axios";
@@ -17,16 +18,16 @@ const MyApplications = () => {
   useEffect(() => {
     try {
       if (user && user.role === "Employer") {
-        axios
-          .get("http://localhost:4000/api/v1/application/employer/getall", {
+        axiosInstance
+          .get("/api/v1/application/employer/getall", {
             withCredentials: true,
           })
           .then((res) => {
             setApplications(res.data.applications);
           });
       } else {
-        axios
-          .get("http://localhost:4000/api/v1/application/jobseeker/getall", {
+        axiosInstance
+          .get("/api/v1/application/jobseeker/getall", {
             withCredentials: true,
           })
           .then((res) => {
@@ -44,8 +45,8 @@ const MyApplications = () => {
 
   const deleteApplication = (id) => {
     try {
-      axios
-        .delete(`http://localhost:4000/api/v1/application/delete/${id}`, {
+      axiosInstance
+        .delete(`/api/v1/application/delete/${id}`, {
           withCredentials: true,
         })
         .then((res) => {

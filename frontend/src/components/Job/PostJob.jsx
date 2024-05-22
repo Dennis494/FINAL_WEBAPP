@@ -3,6 +3,8 @@ import axios from "axios";
 import toast from "react-hot-toast";
 import { useNavigate } from "react-router-dom";
 import { Context } from "../../main";
+import axiosInstance from './api/axiosInstance'; // Adjust the path as needed
+
 const PostJob = () => {
   const [title, setTitle] = useState("");
   const [description, setDescription] = useState("");
@@ -20,9 +22,9 @@ const PostJob = () => {
   const handleJobPost = async (e) => {
     e.preventDefault();
   
-    await axios
+    await axiosInstance
       .post(
-        "http://localhost:4000/api/v1/job/post",
+        "/api/v1/job/post",
         {
           title,
           description,

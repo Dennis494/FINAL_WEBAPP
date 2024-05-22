@@ -1,4 +1,5 @@
 import axios from "axios";
+import axiosInstance from './api/axiosInstance'; // Adjust the path as needed
 import React, { useContext, useState } from "react";
 import toast from "react-hot-toast";
 import { useNavigate, useParams } from "react-router-dom";
@@ -34,8 +35,8 @@ const Application = () => {
     formData.append("jobId", id);
 
     try {
-      const { data } = await axios.post(
-        "http://localhost:4000/api/v1/application/post",
+      const { data } = await axiosInstance.post(
+        "/api/v1/application/post",
         formData,
         {
           withCredentials: true,

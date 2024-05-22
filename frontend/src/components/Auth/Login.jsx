@@ -6,6 +6,7 @@ import { FaRegUser } from "react-icons/fa";
 import axios from "axios";
 import toast from "react-hot-toast";
 import { Context } from "../../main";
+import axiosInstance from './api/axiosInstance'; // Adjust the path as needed
 
 const Login = () => {
   const [email, setEmail] = useState("");
@@ -17,8 +18,8 @@ const Login = () => {
   const handleLogin = async (e) => {
     e.preventDefault();
     try {
-      const { data } = await axios.post(
-        "http://localhost:4000/api/v1/user/login",
+      const { data } = await axiosInstance.post(
+        "/api/v1/user/login",
         { email, password, role },
         {
           headers: {
@@ -46,7 +47,7 @@ const Login = () => {
       <section className="authPage">
         <div className="container">
           <div className="header">
-            <img src="/JobZeelogo.png" alt="logo" />
+            <img src="#" alt="" />
             <h3>Login to your account</h3>
           </div>
           <form>

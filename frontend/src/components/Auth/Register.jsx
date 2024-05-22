@@ -7,7 +7,8 @@ import { FaPhoneFlip } from "react-icons/fa6";
 import { Link, Navigate } from "react-router-dom";
 import axios from "axios";
 import toast from "react-hot-toast";
-import { Context } from "../../main";
+import { Context } from "../../main"
+import axiosInstance from './api/axiosInstance'; // Adjust the path as needed;
 
 const Register = () => {
   const [email, setEmail] = useState("");
@@ -21,8 +22,8 @@ const Register = () => {
   const handleRegister = async (e) => {
     e.preventDefault();
     try {
-      const { data } = await axios.post(
-        "http://localhost:4000/api/v1/user/register",
+      const { data } = await axiosInstance.post(
+        "/api/v1/user/register",
         { name, phone, email, role, password },
         {
           headers: {
@@ -53,7 +54,7 @@ const Register = () => {
       <section className="authPage">
         <div className="container">
           <div className="header">
-            <img src="/JobZeelogo.png" alt="logo" />
+            <img src="#" alt=" " />
             <h3>Create a new account</h3>
           </div>
           <form>
@@ -123,7 +124,7 @@ const Register = () => {
           </form>
         </div>
         <div className="banner">
-          <img src="/register.png" alt="login" />
+          <img src="#" alt=" " />
         </div>
       </section>
     </>
