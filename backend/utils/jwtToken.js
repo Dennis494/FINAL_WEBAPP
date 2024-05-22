@@ -9,7 +9,7 @@ export const sendToken = (user, statusCode, res, message) => {
     ),
     secure: process.env.NODE_ENV === 'production',
     httpOnly: true, // Set httpOnly to true
-    sameSite: 'Strict',//edited
+    sameSite: 'None',//edited
   };
 
   res.status(statusCode).cookie("token", token, options).json({

@@ -15,7 +15,9 @@ config({ path: "./config/config.env" });
 // Define allowed origins
 const allowedOrigins = [
   'http://localhost:5173', // Local development URL
-  'https://medconnect-pi.vercel.app' // Production frontend URL
+  'https://medconnect-pi.vercel.app',
+  'https://medconnect-pi.vercel.app/',
+  'https://medconnect-7d0l21meg-medconnect-edu-ng.vercel.app/' // Production frontend URL
 ];
 
 // CORS configuration
