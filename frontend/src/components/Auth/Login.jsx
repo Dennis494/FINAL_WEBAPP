@@ -6,7 +6,7 @@ import { FaRegUser } from "react-icons/fa";
 import axios from "axios";
 import toast from "react-hot-toast";
 import { Context } from "../../main";
-import axiosInstance from './api/axiosInstance'; // Adjust the path as needed
+import axiosInstance from '../../api/axiosInstance'; // Adjust the relative path accordingly
 
 const Login = () => {
   const [email, setEmail] = useState("");
@@ -93,7 +93,7 @@ const Login = () => {
           </form>
         </div>
         <div className="banner">
-          <img src="/login.png" alt="login" />
+          <img src="#" alt="#" />
         </div>
       </section>
     </>

@@ -8,7 +8,7 @@ import { Link, Navigate } from "react-router-dom";
 import axios from "axios";
 import toast from "react-hot-toast";
 import { Context } from "../../main"
-import axiosInstance from './api/axiosInstance'; // Adjust the path as needed;
+import axiosInstance from '../../api/axiosInstance'; // Adjust the relative path accordingly
 
 const Register = () => {
   const [email, setEmail] = useState("");
