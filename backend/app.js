@@ -15,25 +15,27 @@ config({ path: "./config/config.env" });
 // Define allowed origins
 const allowedOrigins = [
   'http://localhost:5173', // Local development URL
-  'https://medconnect-pi.vercel.app/' // Production frontend URL
+  'https://medconnect-pi.vercel.app' // Production frontend URL
 ];
 
-// Update CORS configuration
-app.use(
-  cors({
-    origin: function (origin, callback) {
-      // Allow requests with no origin (like mobile apps, curl requests)
-      if (!origin) return callback(null, true);
-      if (allowedOrigins.indexOf(origin) === -1) {
-        const msg = 'The CORS policy for this site does not allow access from the specified origin.';
-        return callback(new Error(msg), false);
-      }
-      return callback(null, true);
-    },
-    methods: ["GET", "POST", "DELETE", "PUT"],
-    credentials: true, // Allow cookies and other credentials to be sent
-  })
-);
+// CORS configuration
+const corsOptions = {
+  origin: function (origin, callback) {
+    // Allow requests with no origin (like mobile apps, curl requests)
+    if (!origin) return callback(null, true);
+    if (allowedOrigins.indexOf(origin) !== -1) {
+      callback(null, true);
+    } else {
+      callback(new Error('Not allowed by CORS'));
+    }
+  },
+  methods: ["GET", "POST", "DELETE", "PUT", "OPTIONS"],
+  credentials: true, // Allow cookies and other credentials to be sent
+  allowedHeaders: ["Content-Type", "Authorization"], // Add other headers as needed
+};
+
+// Apply CORS middleware
+app.use(cors(corsOptions));
 
 app.use(cookieParser());
 app.use(express.json());
